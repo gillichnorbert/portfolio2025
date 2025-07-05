@@ -1,0 +1,99 @@
+{
+    "name": "Instant Recept",
+    "langSelection":[
+        {"text":"Magyar", "sign":"hu"},
+        {"text":"English", "sign":"en"}
+       ],
+    "navItem":[
+        {"text":"Kezdőlap", "link":"home"}
+    ],
+    "pantry": "Kamra",
+    "home": "Kezdőlap",
+    "userRecipes": "Receptjeim",
+    "logout": "Kijelentkezés",
+    "login": "Bejelentkezés",
+    "register": "Regisztráció",
+    "addRecipe": "Új Recept",
+    "recipeName": "Recept neve",
+    "requirementTitle": "Elvárás",
+    "categoryTitle": "Kategória",
+    "createRecipeTitle": "Recept létrehozása",
+    "closeButton": "Bezárás",
+    "phone": "Telefonszám: ",
+    "copyright": "© 2025 Instant Recept. Minden jog fenntartva.",
+    "links": "Oldaltérkép",
+
+
+
+    "homeText1": "Ne rendelj,",
+    "homeText2": "Főzz otthon!",
+
+    "homecontent1title": "Megnézném a helyedben",
+    "homecontent1card": [
+        {"text": "Mi van a kamrában?", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs", "user": true},
+        {"text": "Hozd létre a fiókod", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny", "user": false}
+    ],
+    "homecontent2title": "Kiemelt Receptek",
+    "homecontent2card": [
+        {"text": "Paprikás krumpli", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs"},
+        {"text": "Húsleves", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny"},
+        {"text": "BBQ csirkeszárny", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"}
+    ],
+    "registerTitle": "Regisztráció",
+    "loginTitle": "Bejelentkezés",
+    "passwordText": "Jelszó",
+    "confirmPasswordText": "Jelszó megerősítése",
+    "emailLabel": "E-mail cím",
+    "nameLabel": "Név",
+    "alreadyAccountLabel": "Már van fiókod?",
+    "signInGoogle": "Bejelentkezés a Google-lel",
+    "notRegistered": "Fiók létrehozása",
+
+    "editButton": "Szerkeszt",
+    "deleteButton": "Törlés",
+    "saveButton": "Mentés",
+    "cancelButton": "Megszakitás",
+    "addButton": "Hozzáadás",
+
+    "adminPages": [
+        {"text": "Receptek szerkesztése", "link": "admin/recipes-list", "image": "assets/images/icons/pencil.line@5x.png", "admin": 1},
+        {"text": "Hozzávalók szerkesztése", "link": "admin/ingredients-list", "image": "assets/images/icons/pencil.and.list.clipboard@5x.png", "admin": 1},
+        {"text": "Felhasználok kezelése", "link": "admin/users", "image": "assets/images/icons/person.2.badge.gearshape@5x.png", "admin": 2}
+    ],
+    "adminWelcome": "Szia",
+
+    "pantryHeaderTitle": "Alapvető élelmiszerek",
+    "pantryHeaderText": "Pár hozzávalót alapvetőnek gondolunk minden háztartásban, ezért ezeket nem tudjátok kiválasztani: ",
+
+    "recipesHeaderTitle": "Receptek",
+    "ingredientsHeaderTitle": "Hozzávalók",
+    "descriptionTitle": "Lépések",
+    "imageSource": "A kép forrása",
+    "OR": "Ez vagy az",
+    "AND": "Ez megtalálható benne biztosan",
+    "showrecipe": "Mutasd a recepteket",
+    "showingredients": "Mutasd a hozzávalókat",
+    "pending": "Jóváhagyásra váró receptek száma",
+    "selectedIngredientsTitle": "Kiválasztott összetevők",
+    "searchForIngredients": "Kezdjen el írni az összetevők kereséséhez...",
+    "searchForRecipes": "Kezdjen el írni a receptek kereséséhez...",
+    "searchTitle": "Keresés",
+    "deleteSelected": "Kiválasztott összetevők törlése",
+    "ingredientName": "Összetevő neve",
+    "imageLink": "A kép linkje",
+    "remove": "Eltávolítás",
+    "quantity": "Mennyiség",
+    "waitingForApprove": "Jóváhagyásra vár",
+    "approve": "Jóváhagyás",
+    "addIngredient": "Összetevő hozzáadása",
+    "operations":"Műveletek",
+    "preview":"Előnézet",
+    "ingredientsDescription": "Az összetevők közt kereshetsz is az \"Összetevő neve\" mezőben és ha nincs találat hozzá is adhatod",
+    "language": "Nyelv",
+    "everyRecipe": "Minden nyelv",
+    "pendingRecipes": "Jóváhagyásra váró receptek",
+    "userRecipesHeaderTitle": "Saját receptek"
+}

@@ -1,0 +1,103 @@
+{
+    "name": "Instant Recipe",
+    "flagLink": "https://www.harley-davidson.com/content/dam/h-d/images/assets/ui/flags/hungary.png",
+    "langSelection":[
+        {"text":"Magyar", "sign":"hu"},
+        {"text":"English", "sign":"en"}
+    ],
+    "navItem":[
+        {"text":"Home", "link":"home"}
+    ],
+    "pantry":"Pantry",
+    "home": "Home",
+    "logout": "Logout",
+    "login": "Login",
+    "userRecipes": "My recipes",
+    "register": "Register",
+    "addRecipe": "Add Recipe",
+    "recipeName": "Recipe Name",
+    "requirementTitle": "Requirement",
+    "categoryTitle": "Category",
+    "createRecipeTitle": "Create Recipe",
+    "closeButton": "Close",
+    "phone": "Phone number: ",
+    "copyright": "© 2025 Instant Recipe. All rights reserved.",
+    "links": "Links",
+
+
+    "homeText1": "Don't order,",
+    "homeText2": "Cook at home!",
+
+    "homecontent1title": "I would check out your place",
+    "homecontent1card": [
+        {"text": "What's in the pantry?", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs", "user": true},
+        {"text": "Create your account", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny", "user": false}
+        
+    ],
+    "homecontent2title": "Featured Recipes",
+    "homecontent2card": [
+        {"text": "Paprika Potatoes", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs"},
+        {"text": "Beef Soup", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny"},
+        {"text": "BBQ Chicken Wings", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"}
+    ],
+    "registerTitle": "Register",
+    "loginTitle": "Login",
+    "passwordText": "Password",
+    "confirmPasswordText": "Confirm Password",
+    "emailLabel": "Email Address",
+    "nameLabel": "Name",
+    "alreadyAccountLabel": "Already have an account?",
+    "signInGoogle": "Login with Google",
+    "notRegistered": "Create an account",
+
+    "editButton": "Edit",
+    "deleteButton": "Delete",
+    "saveButton": "Save",
+    "cancelButton": "Cancel",
+    "addButton": "Add",
+
+    "adminPages": [
+        {"text": "Edit Recipes", "link": "admin/recipes-list", "image": "assets/images/icons/pencil.line@5x.png", "admin": 1},
+        {"text": "Edit Ingredients", "link": "admin/ingredients-list", "image": "assets/images/icons/pencil.and.list.clipboard@5x.png", "admin": 1},
+        {"text": "Manage Users", "link": "admin/users", "image": "assets/images/icons/person.2.badge.gearshape@5x.png", "admin": 2}
+    ],
+    "adminWelcome": "Hey",
+
+    "pantryHeaderTitle": "Basic Ingredients",
+    "pantryHeaderText": "We consider a few ingredients as essential in every household, so you cannot select these: ",
+
+    "recipesHeaderTitle": "Recipes",
+    "ingredientsHeaderTitle": "Ingredients",
+    "descriptionTitle": "Description",
+    "imageSource": "Image Source",
+    "OR": "This or That",
+    "AND": "This has it for sure",
+
+    "showrecipe": "Show Recipes",
+    "showingredients": "Show Ingredients",
+    "pending": "Pending recipes",
+    "selectedIngredientsTitle": "Selected Ingredients",
+    "searchForIngredients": "Start typing to search for ingredients...",
+    "searchForRecipes": "Start typing to search for recipes...",
+    "searchTitle": "Search",
+    "deleteSelected": "Delete Selected Ingredients",
+    "imageLink": "Image Link",
+    "ingredientName": "Ingredient Name",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "waitingForApprove": "Waiting for approval",
+    "approve": "Approve",
+    "addIngredient": "Add Ingredient",
+    "operations":"Operations",
+    "preview": "Preview",
+    "ingredientsDescription": "If you don't find any match in the \"Ingredient Name\" field, you can add it",
+    "language": "Language",
+    "everyRecipe": "Every language",
+    "pendingRecipes": "Pending recipes",
+    "userRecipesHeaderTitle": "My recipes"
+
+
+}

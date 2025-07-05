@@ -1,0 +1,21 @@
+{
+    "hu": {
+      "invalid_email_format": "Nem megfelelő email formátum",
+      "email_required": "Email nem lehet üres",
+      "email_taken": "Ez az email cím foglalt!",
+      "password_required": "Jelszó nem lehet üres",
+      "password_too_short": "Túl rövid jelszó",
+      "password_rules": "A jelszónak tartalmaznia kell kisbetűt, nagybetűt és számot",
+      "password_mismatch": "Nem egyező jelszó"
+    },
+    "en": {
+      "invalid_email_format": "Invalid email format",
+      "email_required": "Email can't be empty",
+      "email_taken": "This email is already in use!",
+      "password_required": "Password can't be empty",
+      "password_too_short": "Too short password",
+      "password_rules": "Password must contain at least one lowercase letter, one uppercase letter, and one number",
+      "password_mismatch": "Passwords do not match"
+    }
+  }
+  

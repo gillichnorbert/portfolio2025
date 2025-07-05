@@ -1,0 +1,225 @@
+body {
+  font-family: 'LondonTube-MABx', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ececee;
+  background-color: #1f2029;
+  overflow: hidden;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+  height: 100vh;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* GPU gyorsítás */
+}
+
+.section-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  z-index: 6;
+}
+
+h2 {
+  font-family: 'LondonTube-MABx', sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  line-height: 1;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  text-stroke: 2px #fff;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu-icon:checked + label,
+.menu-icon:not(:checked) + label {
+  position: fixed;
+  top: 63px;
+  right: 75px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-icon + label:before,
+.menu-icon + label:after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: none;
+  transition: all 300ms ease;
+}
+
+.menu-icon + label:before {
+  width: 30px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.menu-icon + label:after {
+  width: 22px;
+  height: 2px;
+  top: 10px;
+  right: 4px;
+  margin-top: -1px;
+}
+
+.menu-icon:checked + label:before {
+  top: 10px;
+  transform: rotate(45deg);
+  height: 2px;
+  background-color: #000;
+  border: none;
+}
+
+.menu-icon:checked + label:after {
+  width: 30px;
+  right: 0;
+  transform: rotate(-45deg);
+  margin-top: 0;
+}
+
+.nav {
+  position: fixed;
+  top: 33px;
+  right: 50px;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 9;
+  border-radius: 50%;
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, width, height;
+}
+
+.menu-icon:checked ~ .nav {
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 200%;
+  height: 200%;
+}
+
+.nav ul {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+}
+
+.nav ul li {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 250ms ease-in-out;
+  pointer-events: none;
+  margin: 10px 0;
+}
+
+.menu-icon:checked ~ .nav ul li {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav ul li:nth-child(1) { transition-delay: 300ms; }
+.nav ul li:nth-child(2) { transition-delay: 400ms; }
+.nav ul li:nth-child(3) { transition-delay: 500ms; }
+.nav ul li:nth-child(4) { transition-delay: 600ms; }
+
+.nav ul li a {
+  font-family: 'LondonTube-MABx', sans-serif;
+  
+  font-size: 9vh;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ececee;
+  position: relative;
+  transition: color 250ms ease;
+}
+
+.nav ul li a:hover {
+  color: #ffeba7;
+  text-decoration: none;
+}
+
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2vh;
+  width: 0;
+  margin-top: -1vh;
+  background-color: #353746;
+  opacity: 0.8;
+  transition: width 250ms ease;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  z-index: 11;
+  transition: all 250ms linear;
+}
+
+.logo h2 {
+  height: 16px;
+  width: auto;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .menu-icon:checked + label,
+  .menu-icon:not(:checked) + label {
+    right: 55px;
+  }
+  .logo {
+    left: 30px;
+  }
+  .nav {
+    right: 30px;
+  }
+  h2 {
+    font-size: 7vw;
+    -webkit-text-stroke: 2px transparent;
+    text-stroke: 2px transparent;
+    -webkit-text-fill-color: #ffeba7;
+    text-fill-color: #ffeba7;
+    color: #ffeba7;
+  }
+  .nav ul li a {
+    font-size: 6vh;
+  }
+}

@@ -1,0 +1,118 @@
+<div class="content">
+    <section>
+        <div class="welcome">
+            <div class="row">
+                <h1 class="title">Norbert Gillich</h1>
+            </div>
+            <div class="row card-container">
+                <div class="col">
+                    <div class="card valami">
+                        <h2>Welcome to my portfolio</h2>
+                        <h3>szia</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="card col about" (click)="scrollToSection('about')">
+                            <h2>Learn more about me</h2>
+                            <h3>About Me</h3>
+                        </div>
+                        <div class="card col work" (click)="scrollToSection('work')">
+                            <h2>See some of my projects</h2>
+                            <h3>Work</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card contact" (click)="scrollToSection('contact')">
+                            <h2>Get in touch with me</h2>
+                            <h3>Contact</h3>
+                        </div>
+                    </div>
+                </div>
+            <!-- <div class="socials">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+                <ul>
+                    <li>
+                        <a href="#">
+                        <i class="fab fa-facebook-f icon"></i>    </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+                    <li>
+                        <a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+                </ul>
+            </div> -->
+        </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section about-section" >
+            <h2>About Me</h2>
+            <p>I am a software developer with a passion for creating innovative solutions.</p>
+            <p>My journey in tech started with a fascination for coding and problem-solving.</p>
+            <p>In my free time, I enjoy exploring new technologies and contributing to open-source projects.</p>
+            <p>Feel free to connect with me on social media or through my contact page.</p>
+
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="section work-section"  >
+            <h2>My Work</h2>
+            <p>Here you can find some of my projects and works.</p>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+  <div class="contact-section">
+    <div class="contact-header">
+      <h2>Do you have a question,<br> an idea, or a project you need help with?<br><strong>Contact me!</strong></h2>
+      <div class="contact-info">
+        <a href="mailto:gillich.norbert@icloud.com">gillich.norbert&#64;icloud.com</a>
+        <a href="tel:+36201234567">+36 20 123 4567</a>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="text" name="subject" placeholder="Subject">
+      </div>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">
+        <span>Send</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 15 12 9 18 15" />
+        </svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+    <button
+  class="scroll-to-top"
+  (click)="scrollToTop()"
+  *ngIf="showScrollTopButton"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 15 12 9 18 15" />
+  </svg>
+</button>
+
+</div>

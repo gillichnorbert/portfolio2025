@@ -1,0 +1,73 @@
+{
+    "name": "Instant Rezept",
+    "flagLink": "https://www.harley-davidson.com/content/dam/h-d/images/assets/ui/flags/hungary.png",
+    "langSelection":[
+        {"text":"Magyar", "sign":"hu"},
+        {"text":"English", "sign":"en"},
+        {"text":"Deutsch", "sign":"de"}
+       ],
+    "navItem":[
+        {"text":"Startseite", "link":"home"}
+    ],
+    "pantry":"Was ist in der Speisekammer?",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "addRecipe": "Rezept hinzufügen",
+
+    "homeText1": "Nicht bestellen,",
+    "homeText2": "Koche zu Hause!",
+
+    "homecontent1title": "Ich würde es an deiner Stelle anschauen",
+    "homecontent1card": [
+        {"text": "Was ist in der Speisekammer?", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs"},
+        {"text": "Erstelle dein Konto", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny"}
+    ],
+    "homecontent2title": "Hervorgehobene Rezepte",
+    "homecontent2card": [
+        {"text": "Paprikakartoffeln", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs"},
+        {"text": "Rindfleischsuppe", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny"},
+        {"text": "BBQ-Hähnchenflügel", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
+        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"}
+    ],
+    "registerTitle": "Registrierung",
+    "loginTitle": "Anmeldung",
+    "passwordText": "Passwort",
+    "confirmPasswordText": "Passwort bestätigen",
+    "emailLabel": "E-Mail-Adresse",
+    "nameLabel": "Name",
+    "alreadyAccountLabel": "Hast du bereits ein Konto?",
+    "signInGoogle": "Mit Google anmelden",
+    "notRegistered": "Konto erstellen",
+
+    "editButton": "Bearbeiten",
+    "deleteButton": "Löschen",
+    "saveButton": "Speichern",
+    "cancelButton": "Abbrechen",
+    "addButton": "Hinzufügen",
+
+    "adminPages": [
+        {"text": "Rezept hinzufügen", "link": "admin/addrecipe", "image": "assets/images/icons/plus.square.on.square@5x.png", "admin": 1 },
+        {"text": "Rezepte bearbeiten", "link": "admin/recipes-list", "image": "assets/images/icons/pencil.line@5x.png", "admin": 1},
+        {"text": "Zutaten bearbeiten", "link": "admin/ingredients-list", "image": "assets/images/icons/pencil.and.list.clipboard@5x.png", "admin": 1},
+        {"text": "Benutzer verwalten", "link": "admin/users", "image": "assets/images/icons/person.2.badge.gearshape@5x.png", "admin": 2}
+    ],
+    "adminWelcome": "Hallo",
+
+    "pantryHeaderTitle": "Grundnahrungsmittel",
+    "pantryHeaderText": "Einige Zutaten halten wir für grundlegend in jedem Haushalt, daher kannst du diese nicht auswählen: ",
+
+    "recipesHeaderTitle": "Rezepte",
+    "ingredientsHeaderTitle": "Zutaten",
+    "descriptionTitle": "Zubereitung",
+    "imageSource": "Bildquelle: ",
+    "OR": "Das oder das",  
+    "AND": "Das ist sicher enthalten",
+
+    "showrecipe": "Rezepte anzeigen",
+    "showingredients": "Zutaten anzeigen",
+    "pending": "Anstehende Rezepte"
+
+}

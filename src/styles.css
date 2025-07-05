@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'LondonTube-MABx';
+    src: url('/assets/fonts/LondonTube-MABx.ttf') format('truetype'),
+}
+
+body {
+    font-family: "LondonTube-MABx", sans-serif;
+}

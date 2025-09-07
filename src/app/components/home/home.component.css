@@ -7,7 +7,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
     overflow: hidden;
 }
 
@@ -22,31 +21,24 @@
     pointer-events: none;
 }
 
-
-
 .content h1 {
   top: 50%;
   color: #fff;
   font-size: 3rem;
   text-align: center;
-  z-index: 2; /* Ensure text is above the overlay */
-    position: relative;
-    font-weight: 700;
-    
+  z-index: 2;
+  position: relative;
+  font-weight: 500;
 }
 
 .welcome {
     position: relative;
+    margin: 0 auto;
     text-align: center;
-    z-index: 2; /* Ensure welcome section is above the overlay */
-}
-
-.title {
-    display: inline-block;
+    z-index: 2;
 }
 
 .card {
-  flex: 1 1 0;
   min-height: 27.5vh;
   min-width: 0;
   width: 100%;
@@ -57,109 +49,160 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   color: #fff;
-  position: relative;
   z-index: 2; 
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: start;
   cursor: pointer;
+  transition: 
+    box-shadow 0.5s cubic-bezier(.4,2,.6,1),
+    transform 0.5s cubic-bezier(.4,2,.6,1);
 }
 
-
-.welcome .socials {
-    ul {
-        margin-top: 6rem;
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-ul li {
-  list-style: none;
-}
-
-ul li a {
-  width: 80px;
-  height: 80px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 80px;
-  font-size: 35px;
-  margin: 0 10px;
-  display: block;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #fff;
-  z-index: 1;
-}
-
-.col {
-  padding: 0;
-}
-ul li a .icon {
-  position: relative;
-  color: #262626;
-  transition: .5s;
-  z-index: 3;
-}
-
-ul li a:hover .icon {
-  color: #fff;
-  transform: rotateY(360deg);
-}
-
-ul li a:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
+.card img {
   width: 100%;
-  height: 100%;
-  background: #f00;
-  transition: .5s;
-  z-index: 2;
-}
+  height: auto;
+  border-radius: 24px;
+  margin-bottom: 1rem;
 
-ul li a:hover:before {
-  top: 0;
 }
-
-ul li:nth-child(1) a:before{
-  background: #3b5999;
-}
-
-ul li:nth-child(2) a:before{
-  background: #55acee;
-}
-
-ul li:nth-child(3) a:before {
-  background: #0077b5;
-}
-
-ul li:nth-child(4) a:before {
-  background: #dd4b39;
-}
-}
-
 
 .about {
   background-color: #fff;
   color: #000;
-  margin: 0 5px 5px 0;
+  margin-right: 5px;
 }
 
-.work {
+
+
+.projects .card {
   background-color: #fa6601;
   color: #000;
-  margin: 0 0px 5px 5px;
+  border: 1px solid #fa6601;
+  padding: 20px;
+  border-radius: 36px;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.projects {
+  padding: 20px;
+}
+
+.work-section .section-card {
+  /* UGYANAZ, mint az about-section kártya */
+  color: #000;
+  background-color: #fa6601;
+  border: 1px solid #fa6601;
+  padding: 10px;
+}
+
+#work  {
+  padding: 0;
 }
 
 
-.card h2 {
+
+.work-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.welcome .work {
+  background-color: #fa6601;
+  color: #000;
+}
+
+.work-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fa6601; /* korábban #fa6601 */
+}
+#work .title {
+  margin: 0;
+  padding: 34px 34px 0 34px;
+}
+
+.work-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+}
+
+section .work {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.work-content .text {
+  flex: 1;
+}
+
+.work-content .projects {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Kapcsoló design */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+  margin: 0  5px 0  34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #555; /* sötétszürke */
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #000;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #fa6601; /* narancs */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+
+
+
+.welcome .card h2 {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.3s cubic-bezier(.4,2,.6,1), transform 0.3s cubic-bezier(.4,2,.6,1);
@@ -167,47 +210,44 @@ ul li:nth-child(4) a:before {
   margin: 0;
 }
 
-
-.card:hover h2 {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-
-
-.card h3 {
+.welcome  .card h3 {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s cubic-bezier(.4,2,.6,1), transform 0.3s cubic-bezier(.4,2,.6,1);
 }
 
-.card:hover h3 {
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: opacity 0.3s cubic-bezier(.4,2,.6,1), transform 0.3s cubic-bezier(.4,2,.6,1);
-  pointer-events: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
+/* === HOVER EFFEKTEK CSAK DESKTOPON === */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: scale(0.98);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
 
-/* ...létező kód... */
+  .welcome .card:hover h2 {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .welcome .card:hover h3 {
+    opacity: 0;
+    transform: translateY(-30px);
+    pointer-events: none;
+  }
+}
 
 .contact {
   background-color: #00bfa6;
   color: #000;
-  margin: 5px 0 0px 0;
+  margin-top: 10px;
 }
 
 .valami {
   background-color: #5d5e5c;
   color: #000;
-  margin: 5px 0 0px 0;
 }
 
 .content, .welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
   min-height: 100vh;
 }
 
@@ -219,14 +259,6 @@ ul li:nth-child(4) a:before {
 section {
   min-height: 100vh;
 }
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
 
 .welcome {
   flex: 1 1 auto;
@@ -252,19 +284,47 @@ section {
 }
 
 .section {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   border: 1px solid;
-  border-radius: 36px;
+  border-radius: 37px;
+  min-height: 85vh;
   margin: 20px;
 }
 
+.about-section .section-card {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.section-card {
+  padding: 34px;
+  align-self: flex-end;
+  margin-right: 0;
+  width: 100%;
+  height: 85vh;
+  margin-left: auto;
+  border-radius: 36px;
+}
+
+.section .text {
+  padding: 34px;
+}
+
+.section-card strong {
+  font-size: 2.4rem;
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
 .work-section {
-  border-color: #fa6601;
-  color: #fa6601;
+  border: 1px solid #fa6601;   /* korábban #fa6601 */
+  color: #fa6601;          /* korábban #fa6601 */
 }
 
 .about-section {
@@ -278,6 +338,7 @@ section {
   text-align: center;
   padding: 20px;
   display: flex;
+  max-height: 80%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -285,6 +346,8 @@ section {
   border-radius: 36px;
   margin: 20px;
 }
+
+
 
 .contact-section h2 {
   margin-bottom: 10px;
@@ -331,7 +394,6 @@ section {
   will-change: opacity, transform;
 }
 
-
 .scroll-to-top.hidden {
   opacity: 0;
   pointer-events: none;
@@ -351,117 +413,265 @@ section {
   stroke: black;
 }
 
+#contact {
+  background: #121212;
+  max-height: 50%;
+  color: #f6e94e;
+  border-radius: 36px;
+  min-width: 98%;
+  margin: auto;
+  margin-top: 2rem;
+}
 
- #contact {
-    background: #121212;
-    color: #f6e94e;
-    border-radius: 36px;
-    min-width: 98%;
-    margin: auto;
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.contact-info {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info a {
+  border: 2px solid #f6e94e;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  color: #f6e94e;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.work-content .projects a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  background: #f6e94e;
+  color: #121212;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 999px;
+  background: #1f1f1f;
+  color: #f6e94e;
+}
+
+textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background: #1f1f1f;
+  color: #f6e94e;
+  height: 150px;
+  resize: none;
+}
+
+button[type="submit"] {
+  background: #f6e94e;
+  color: #121212;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-end;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #fff27e;
+}
+
+/* gépelt szöveg */
+.typed {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #f6e94e;
+  font-family: inherit;
+  height: 2.2rem;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: font-size 0.3s, color 0.3s, margin-top 0.3s;
+}
+
+.typed::after {
+  content: '';
+  display: inline-block;
+  width: 2.5px;
+  height: 1.2em;
+  background: #f6e94e;
+  margin-left: 2px;
+  vertical-align: -0.1em;
+  animation: blink-cursor 0.8s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+  gap: 0.1em;
+}
+
+/* === MOBIL NÉZET === */
+@media (max-width: 768px) {
+  .work-content {
+    flex-direction: column; /* egymás alá teszi */
   }
 
-  .contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
+  .work-content.reverse {
+    flex-direction: column; /* a kapcsoló se fordítsa meg mobilon */
   }
 
-  .contact-info {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 2rem;
+  .work-content .text {
+    order: 1; /* szöveg mindig felül */
   }
 
-  .contact-info a {
-    border: 2px solid #f6e94e;
-    padding: 0.6rem 1rem;
-    border-radius: 999px;
-    color: #f6e94e;
-    text-decoration: none;
-    transition: background 0.3s;
+  .work-content .projects {
+    order: 2; /* kártyák mindig alul */
   }
 
-  .contact-info a:hover {
-    background: #f6e94e;
-    color: #121212;
-  }
 
-  .social-icons a {
-    font-size: 1.2rem;
-  }
-
-  .contact-form {
+   /* === ABOUT === */
+  .about-section .row {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
   }
 
-  .form-group {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  /* kártya menjen alul */
+  .about-section .text {
+    order: 1;
   }
 
-  .form-group input {
-    flex: 1;
-    padding: 1rem;
-    border: none;
-    border-radius: 999px;
-    background: #1f1f1f;
-    color: #f6e94e;
+  .about-section .skills {
+    order: 2;
+    margin-top: 20px;
+    width: 100%; /* kitöltse mobilon */
+    height: auto;
   }
 
-  textarea {
-    padding: 1rem;
-    border: none;
-    border-radius: 1rem;
-    background: #1f1f1f;
-    color: #f6e94e;
-    height: 150px;
-    resize: none;
+
+
+  .content {
+    padding: 20px;
   }
 
-  button[type="submit"] {
-    background: #f6e94e;
-    color: #121212;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
+  .hero-section {
     align-items: center;
-    gap: 0.5rem;
-    align-self: flex-end;
-    transition: background 0.3s;
+    margin: 0 auto;
   }
 
-  button[type="submit"]:hover {
-    background: #fff27e;
+  .welcome h1 {
+    font-size: 2.5rem;
   }
 
-
-@media (max-width: 768px) {
-  .card-container,
-  .row,
-  .col {
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
-    gap: 16px;
+  .card-container {
+    flex-direction: column;
+    height: fit-content;
   }
 
+  .hero-section {
+    font-size: 2rem;
+  }
+
+  .section-card {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .contact-section {
+    padding: 20px;
+    height: auto;
+  }
 
   .card {
+    min-height: 20.5vh;
     min-width: 0;
-    width: 80%;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    margin: 5px 0;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    z-index: 2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    cursor: pointer;
   }
 
-  
+  /* Mobilon a h3 mindig látszik */
+  .card h3 {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Mobilon a h2 ki van véve */
+  .card h2 {
+    display: none;
+  }
+
+  .title-col {
+    padding: 0;
+  }
+
+  .valami {
+    width: 100%;
+    color: #000;
+  }
+
+  .about {
+    margin-right: 5px;
+  }
+
+  .work {
+    margin-left: 5px;
+  }
 }

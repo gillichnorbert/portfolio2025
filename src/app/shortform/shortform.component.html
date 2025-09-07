@@ -1,0 +1,41 @@
+<div class="content">
+  <div class="title">
+    <h1>Short Form Videos</h1>
+  </div>
+
+  <div class="video-container">
+    <div class="video-wrapper" *ngFor="let video of videos">
+      <div class="video">
+        <iframe
+          #videoIframe
+          [src]="video.url"
+          allow="autoplay; fullscreen; picture-in-picture"
+          frameborder="0">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigációs gombok -->
+  <div class="nav-buttons">
+    <button (click)="prevVideo()" [disabled]="isPrevDisabled" class="video-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 15 12 9 18 15" />
+      </svg>
+    </button>
+
+    <button (click)="nextVideo()" [disabled]="isNextDisabled" class="video-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </button>
+  </div>
+
+<button class="scroll-to-top" (click)="backToHome()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 12 L12 3 L21 12" /> <!-- tető -->
+    <path d="M6 12 V21 H18 V12" />    <!-- ház alap -->
+  </svg>
+</button>
+
+</div>

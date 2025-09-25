@@ -13,10 +13,10 @@
     "contactCardTitle": "Lépj velem kapcsolatba",
     "contactCardSubtitle": "Kapcsolat",
     "aboutTitle": "Rólam",
-    "aboutParagraph1": "Szenvedélyes szoftverfejlesztő vagyok, tapasztalattal a modern webalkalmazások építésében <strong>Laravel</strong>, <strong>Angular</strong> és <strong>Java</strong> segítségével.",
-    "aboutParagraph2": "Jelenleg <strong>Swift</strong>-et tanulok, hogy iOS fejlesztéssel is foglalkozhassak.",
-    "aboutParagraph3": "A kódoláson kívül <strong>videóvágóként</strong> is dolgozom, kreativitást és technikai tudást kombinálva történeteket mesélek el vizuálisan.",
-    "aboutParagraph4": "Szeretek új technológiákat tanulni és kreatív kihívásokat vállalni. Bátran keress meg!",
+"aboutParagraph1": "Pályafutásom a <b>média és az informatika</b> metszéspontján indult. A TV2-nél végzett videóvágó képzés során elsajátítottam a vizuális narratíva alapelveit, ami a mai napig meghatározza kreatív megközelítéseimet a <b>szoftverfejlesztésben</b>.",
+"aboutParagraph2": "<b>Short form</b> és egyéb videókat is szívesen vágok, főként <b>Final Cut Pro-val</b>.",
+"aboutParagraph3": "A <b>szoftverfejlesztés és tesztelés</b> területén szerzett átfogó tudásom a BZSH Külkereskedelmi Technikum elvégzésével alapozódott meg, ahol kiemelkedő, <b>93%-os vizsgaeredményt</b> értem el. Tudásomat 2025 szeptemberétől az Óbudai Egyetem Neumann János Informatikai Karán, <b>mérnökinformatikus</b> szakon bővítem tovább.",
+"aboutParagraph4": "Specializációm a webfejlesztés, különös tekintettel az <b>Angular</b>, <b>Firebase</b>, <b>Laravel</b> és <b>Bootstrap</b> technológiákra, miközben folyamatosan bővítem ismereteimet a mobilfejlesztés, azon belül is a <b>Swift</b> területén. Nyitott vagyok a szakmai együttműködésekre és a kihívásokra. Várom megkeresésedet!",
     "skillsTitle": "Képességeim",
     "workTitle": "Munkáim",
     "workSwitchEditing": "Vágás",
@@ -24,7 +24,7 @@
     "workEditingTitle": "Videóvágási munkáimról",
     "workEditingDesc": "Ezek a videóvágási projektjeim, ahol a kreativitásomat és technikai tudásomat kombinálom, hogy érdekes tartalmat készítsek.",
     "workDevTitle": "Fejlesztési munkáimról",
-    "workDevDesc": "Ezek a fejlesztési projektjeim...",
+    "workDevDesc": "Itt találod legújabb webes és szoftveres munkáimat. Minden projekt mögött egy cél áll: a modern technológiák és a kreatív problémamegoldás ötvözése, hogy valami újat és értékeset hozzak létre.",
     "contactTitle": "Van kérdésed,<br> ötleted vagy projekted, amihez segítség kell?<br><strong>Lépj kapcsolatba velem!</strong>",
     "formName": "Név",
     "formEmail": "E-mail",
@@ -34,21 +34,22 @@
     "formSuccess": "Az üzeneted sikeresen elküldve!",
 "webProjects": [
   {
-    "title": "Ceremóniamester",
-    "description": "Webprojekt 1 leírása",
+    "title": "Szabó Csaba - Ceremóniamester",
+    "description": "Egy bemutatkozó weboldal Szabó Csaba ceremóniamesternek, amely Angular frontenddel és Firebase backenddel készült. A platform célja, hogy elegáns módon mutassa be szolgáltatásait, fotógalériáját és elérhetőségeit.",
     "image": "https://ceremoniamestercsaba.hu/assets/img/boritokep.png",
     "link": "https://ceremoniamestercsaba.hu"
   },
-  {
-    "title": "SafeCard Webshop",
-    "description": "Webprojekt 2 leírása",
-    "image": "https://safecard.hu/assets/images/IMG_9915.png",
-    "link": "https://safecard.hu/"
-  },
+{
+  "title": "SafeCard Webshop",
+  "description": "Egy modern webshop, amely Angular keretrendszerrel és Firebase backenddel készült. A cél egy gyors és biztonságos online vásárlási felület megteremtése.",
+  
+  "image": "assets/images/safecard_bg.png",
+  "link": "https://safecard.hu/"
+},
   {
     "title": "GitHub",
-    "description": "Webprojekt 3 leírása",
-    "image": "https://opengraph.githubassets.com/8c759607149e1a096e11cdf9877cdfa3ba8cf36725bb34bc090cce93efd0285d/0xBYTESHIFT/fp16",
+    "description": "Itt találod az összes projektemet",
+    "image": "assets/images/0xBYTESHIFT.png",
     "link": "https://github.com/gillichnorbert"
   }
 ],

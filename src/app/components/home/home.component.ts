@@ -1,85 +1,130 @@
-import { Component, ElementRef, HostListener, AfterViewInit } from '@angular/core';
-import { MessagesService } from '../../messages.service';
+import { Component, ElementRef, HostListener, AfterViewInit, QueryList, ViewChildren } from '@angular/core';
+import { MessagesService } from '../../services/messages.service';
+import { ConfigService } from '../../services/config.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
+  @ViewChildren('projectCard', { read: ElementRef }) projectCards!: QueryList<ElementRef>;
   showScrollTopButton = false;
   aboutInView = false;
   titleInView = false;
   isVideoEditing = true;
-    name = '';
+
+  langSelection: any[] = [];
+  translations: any = {};
+  actLang = 'English';
+
+  // Form mezők
+  name = '';
   email = '';
   phone = '';
   message = '';
   subject = '';
   success = false;
 
-  webProjects = [
-    {
-      title: 'Master of Ceremonies',
-      description: 'Description of Web Project 1',
-      image: "https://ceremoniamestercsaba.hu/assets/img/boritokep.png",
-      link: 'https://ceremoniamestercsaba.hu'
-    },
-    {
-      title: 'SafeCard Webshop',
-      description: 'Description of Web Project 2',
-      image: 'https://safecard.hu/assets/images/IMG_9915.png',
-      link: 'https://safecard.hu/'
-    },
-    {
-      title: 'GitHub',
-      description: 'Description of Web Project 2',
-      image: 'https://opengraph.githubassets.com/8c759607149e1a096e11cdf9877cdfa3ba8cf36725bb34bc090cce93efd0285d/0xBYTESHIFT/fp16',
-      link: 'https://github.com/gillichnorbert'
+  // Projektek
+  webProjects: any[] = [];
+  videoProjects: any[] = [];
+
+  // Fordításokhoz
+  welcomeTitle!: string;
+  welcomeSubtitle!: string;
+  aboutCardTitle!: string;
+  aboutCardSubtitle!: string;
+  workCardTitle!: string;
+  workCardSubtitle!: string;
+  contactCardTitle!: string;
+  contactCardSubtitle!: string;
+  aboutTitle!: string;
+  aboutParagraph1!: string;
+  aboutParagraph2!: string;
+  aboutParagraph3!: string;
+  aboutParagraph4!: string;
+  skillsTitle!: string;
+  workTitle!: string;
+  workSwitchEditing!: string;
+  workSwitchDevelopment!: string;
+  workEditingTitle!: string;
+  workEditingDesc!: string;
+  workDevTitle!: string;
+  workDevDesc!: string;
+  contactTitle!: string;
+  formName!: string;
+  formEmail!: string;
+  formSubject!: string;
+  formMessage!: string;
+  formSend!: string;
+  formSuccess!: string;
+
+  constructor(
+    private config: ConfigService,
+    private el: ElementRef,
+    private messagesService: MessagesService
+  ) {
+    this.loadContent();
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+      this.actLang = savedLanguage === 'en' ? 'English' : savedLanguage === 'de' ? 'Deutsch' : 'Magyar';
+      this.config.changeLanguage(savedLanguage);
     }
-  ];
+  }
 
-    videoProjects = [
-    {
-      title: 'Short Form Videos',
-      description: "Creative short videos that quickly capture the viewer’s attention.",
-      image: 'assets/images/shortform.png',
-      link: '/shortform'
-    },
-    {
-      title: 'Television',
-      description: 'Worked as an editor on "Ázsia Express" in 2023, gaining experience in editing both game and reality TV content.',
-      image: 'https://media.port.hu/images/001/593/002.webp',
-      link: 'https://tv2play.hu/azsia_expressz/4/videok'
-    },
-    {
-      title: 'Music Video',      
-      description: 'Served as director, editor, and creative lead, handling all aspects of production to bring the artistic vision to life.',    
-      image: 'assets/images/burberry.png',
-      link: 'https://youtu.be/zxTy-kzTKJs'
-    }];
-  
-  constructor(private el: ElementRef, private messagesService: MessagesService) {}
-
-    get projects() {
+  get projects() {
     return this.isVideoEditing ? this.videoProjects : this.webProjects;
   }
 
-  
+  ngAfterViewInit(): void {
+    this.initIntersectionObserver();
+    this.initTypingAnimation();
 
-  ngAfterViewInit() {
-    setTimeout(() => this.titleInView = true, 100);
+    this.projectCards.changes.subscribe(() => {
+      this.runCardAnimation();
+    });
+
+    setTimeout(() => this.runCardAnimation(), 100);
+  }
+
+  toggleSwitch() {
+    this.projectCards.forEach(card => {
+      card.nativeElement.classList.add('fade-out');
+    });
+
+    setTimeout(() => {
+      this.isVideoEditing = !this.isVideoEditing;
+    }, 200);
+  }
+
+
+  private runCardAnimation() {
+    if (!this.projectCards || this.projectCards.length === 0) return;
+
+    this.projectCards.forEach((card, index) => {
+      const el = card.nativeElement as HTMLElement;
+      el.classList.remove('in-view', 'fade-out');
+      el.style.animationDelay = `${index * 0.15}s`;
+      setTimeout(() => el.classList.add('in-view'), 10);
+    });
+
+    setTimeout(() => (this.titleInView = true), 100);
+  }
+
+  private initIntersectionObserver() {
     const aboutSection = this.el.nativeElement.querySelector('.about-section');
+    if (!aboutSection) return;
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        this.aboutInView = entry.isIntersecting;
-      },
+      ([entry]) => (this.aboutInView = entry.isIntersecting),
       { threshold: 0.3 }
     );
-    if (aboutSection) {
-      observer.observe(aboutSection);
-    }
-        const typedEl: HTMLElement | null = document.querySelector('.typed');
+    observer.observe(aboutSection);
+  }
+
+  private initTypingAnimation() {
+    const typedEl: HTMLElement | null = document.querySelector('.typed');
     if (!typedEl) return;
 
     const itemsAttr = typedEl.getAttribute('data-typed-items');
@@ -127,37 +172,89 @@ export class HomeComponent implements AfterViewInit {
     this.showScrollTopButton = scrollTop > 100;
   }
 
+  toggleLanguage() {
+    if (this.actLang === 'Magyar') {
+      this.langChange({ text: 'English', sign: 'en' });
+    } else {
+      this.langChange({ text: 'Magyar', sign: 'hu' });
+    }
+  }
+
+  langChange(lang: any) {
+    this.actLang = lang.text;
+    this.config.changeLanguage(lang.sign);
+    localStorage.setItem('selectedLanguage', lang.sign);
+  }
+
   scrollToSection(sectionId: string): void {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  scrollToBottom(): void {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+  onSubmit() {
+    if (!this.name || !this.email || !this.message || !this.subject) return;
+
+    this.messagesService.sendMessage({
+      name: this.name,
+      email: this.email,
+      subject: this.subject,
+      message: this.message
+    }).subscribe({
+      next: () => {
+        this.success = true;
+        this.name = this.email = this.subject = this.message = '';
+      },
+      error: (err) => {
+        console.error('Hiba az üzenet küldése közben:', err);
+        alert('Az üzenet küldése sikertelen.');
+      }
+    });
   }
 
-onSubmit() {
-  if (!this.name || !this.email || !this.message || !this.subject) return;
+  loadContent() {
+    this.config.getContent().subscribe(content => {
+      this.translations = content;
+      this.webProjects = content.webProjects || [];
+      this.videoProjects = content.videoProjects || [];
+      this.langSelection = content.langSelection || [];
 
-  this.messagesService.sendMessage({
-    name: this.name,
-    email: this.email,
-    subject: this.subject,
-    message: this.message
-  }).subscribe({
-    next: () => {
-      this.success = true;
-      this.name = this.email = this.subject = this.message = '';
-    },
-    error: (err) => {
-      console.error('Hiba az üzenet küldése közben:', err);
-      alert('Az üzenet küldése sikertelen.');
-    }
-  });
-}
-
+      Object.assign(this, {
+        welcomeTitle: content.welcomeTitle,
+        welcomeSubtitle: content.welcomeSubtitle,
+        aboutCardTitle: content.aboutCardTitle,
+        aboutCardSubtitle: content.aboutCardSubtitle,
+        workCardTitle: content.workCardTitle,
+        workCardSubtitle: content.workCardSubtitle,
+        contactCardTitle: content.contactCardTitle,
+        contactCardSubtitle: content.contactCardSubtitle,
+        aboutTitle: content.aboutTitle,
+        aboutParagraph1: content.aboutParagraph1,
+        aboutParagraph2: content.aboutParagraph2,
+        aboutParagraph3: content.aboutParagraph3,
+        aboutParagraph4: content.aboutParagraph4,
+        skillsTitle: content.skillsTitle,
+        workTitle: content.workTitle,
+        workSwitchEditing: content.workSwitchEditing,
+        workSwitchDevelopment: content.workSwitchDevelopment,
+        workEditingTitle: content.workEditingTitle,
+        workEditingDesc: content.workEditingDesc,
+        workDevTitle: content.workDevTitle,
+        workDevDesc: content.workDevDesc,
+        contactTitle: content.contactTitle,
+        formName: content.formName,
+        formEmail: content.formEmail,
+        formSubject: content.formSubject,
+        formMessage: content.formMessage,
+        formSend: content.formSend,
+        formSuccess: content.formSuccess
+      });
+    });
+    
+  }
 }

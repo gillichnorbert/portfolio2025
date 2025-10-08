@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ShortformComponent } from './shortform/shortform.component';
+import { ShortformComponent } from './components/shortform/shortform.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},

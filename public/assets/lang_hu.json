@@ -1,99 +1,80 @@
 {
-    "name": "Instant Recept",
+    "name": "Gillich Norbert",
     "langSelection":[
         {"text":"Magyar", "sign":"hu"},
         {"text":"English", "sign":"en"}
        ],
-    "navItem":[
-        {"text":"Kezdőlap", "link":"home"}
-    ],
-    "pantry": "Kamra",
-    "home": "Kezdőlap",
-    "userRecipes": "Receptjeim",
-    "logout": "Kijelentkezés",
-    "login": "Bejelentkezés",
-    "register": "Regisztráció",
-    "addRecipe": "Új Recept",
-    "recipeName": "Recept neve",
-    "requirementTitle": "Elvárás",
-    "categoryTitle": "Kategória",
-    "createRecipeTitle": "Recept létrehozása",
-    "closeButton": "Bezárás",
-    "phone": "Telefonszám: ",
-    "copyright": "© 2025 Instant Recept. Minden jog fenntartva.",
-    "links": "Oldaltérkép",
+    "welcomeTitle": "Üdv a portfóliómban",
+    "welcomeSubtitle": "Helló!",
+    "aboutCardTitle": "Tudj meg többet rólam",
+    "aboutCardSubtitle": "Rólam",
+    "workCardTitle": "Nézd meg a projektjeimet",
+    "workCardSubtitle": "Munkáim",
+    "contactCardTitle": "Lépj velem kapcsolatba",
+    "contactCardSubtitle": "Kapcsolat",
+    "aboutTitle": "Rólam",
+"aboutParagraph1": "Pályafutásom a <b>média és az informatika</b> metszéspontján indult. A TV2-nél végzett videóvágó képzés során elsajátítottam a vizuális narratíva alapelveit, ami a mai napig meghatározza kreatív megközelítéseimet a <b>szoftverfejlesztésben</b>.",
+"aboutParagraph2": "<b>Short form</b> és egyéb videókat is szívesen vágok, főként <b>Final Cut Pro-val</b>.",
+"aboutParagraph3": "A <b>szoftverfejlesztés és tesztelés</b> területén szerzett átfogó tudásom a BZSH Külkereskedelmi Technikum elvégzésével alapozódott meg, ahol kiemelkedő, <b>93%-os vizsgaeredményt</b> értem el. Tudásomat 2025 szeptemberétől az Óbudai Egyetem Neumann János Informatikai Karán, <b>mérnökinformatikus</b> szakon bővítem tovább.",
+"aboutParagraph4": "Specializációm a webfejlesztés, különös tekintettel az <b>Angular</b>, <b>Firebase</b>, <b>Laravel</b> és <b>Bootstrap</b> technológiákra, miközben folyamatosan bővítem ismereteimet a mobilfejlesztés, azon belül is a <b>Swift</b> területén. Nyitott vagyok a szakmai együttműködésekre és a kihívásokra. Várom megkeresésedet!",
+    "skillsTitle": "Képességeim",
+    "workTitle": "Munkáim",
+    "workSwitchEditing": "Vágás",
+    "workSwitchDevelopment": "Fejlesztés",
+    "workEditingTitle": "Videóvágási munkáimról",
+    "workEditingDesc": "Ezek a videóvágási projektjeim, ahol a kreativitásomat és technikai tudásomat kombinálom, hogy érdekes tartalmat készítsek.",
+    "workDevTitle": "Fejlesztési munkáimról",
+    "workDevDesc": "Itt találod legújabb webes és szoftveres munkáimat. Minden projekt mögött egy cél áll: a modern technológiák és a kreatív problémamegoldás ötvözése, hogy valami újat és értékeset hozzak létre.",
+    "contactTitle": "Van kérdésed,<br> ötleted vagy projekted, amihez segítség kell?<br><strong>Lépj kapcsolatba velem!</strong>",
+    "formName": "Név",
+    "formEmail": "E-mail",
+    "formSubject": "Tárgy",
+    "formMessage": "Üzenet",
+    "formSend": "Küldés",
+    "formSuccess": "Az üzeneted sikeresen elküldve!",
+"webProjects": [
+  {
+    "title": "Szabó Csaba - Ceremóniamester",
+    "description": "Egy bemutatkozó weboldal Szabó Csaba ceremóniamesternek, amely Angular frontenddel és Firebase backenddel készült. A platform célja, hogy elegáns módon mutassa be szolgáltatásait, fotógalériáját és elérhetőségeit.",
+    "image": "https://ceremoniamestercsaba.hu/assets/img/boritokep.png",
+    "link": "https://ceremoniamestercsaba.hu"
+  },
+{
+  "title": "SafeCard Webshop",
+  "description": "Egy modern webshop, amely Angular keretrendszerrel és Firebase backenddel készült. A cél egy gyors és biztonságos online vásárlási felület megteremtése.",
+  
+  "image": "assets/images/safecard_bg.png",
+  "link": "https://safecard.hu/"
+},
+  {
+    "title": "GitHub",
+    "description": "Itt találod az összes projektemet",
+    "image": "assets/images/0xBYTESHIFT.png",
+    "link": "https://github.com/gillichnorbert"
+  }
+],
 
+"videoProjects": [
+  {
+    "title": "Rövidformátumú videók",
+    "description": "Kreatív rövidformátumú videók, amelyek gyorsan megragadják a nézők figyelmét.",
+    "image": "assets/images/shortform.png",
+    "link": "/shortform"
+  },
+  {
+    "title": "Televízió",
+    "description": "2023-ban vágóként dolgoztam az \"Ázsia Express\" műsoron, tapasztalatot szerezve játék- és reality TV tartalmak szerkesztésében.",
+    "image": "https://media.port.hu/images/001/593/002.webp",
+    "link": "https://tv2play.hu/azsia_expressz/4/videok"
+  },
+  {
+    "title": "Zenei videó",
+    "description": "Rendezőként, szerkesztőként és kreatív vezetőként dolgoztam, a produkció minden aspektusát kezelve az alkotói vízió megvalósításához.",
+    "image": "assets/images/burberry.png",
+    "link": "https://youtu.be/zxTy-kzTKJs"
+  }
+],
 
+"typedItems": "Frontend fejlesztő, Szoftverfejlesztő, Videószerkesztő"
 
-    "homeText1": "Ne rendelj,",
-    "homeText2": "Főzz otthon!",
-
-    "homecontent1title": "Megnézném a helyedben",
-    "homecontent1card": [
-        {"text": "Mi van a kamrában?", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs", "user": true},
-        {"text": "Hozd létre a fiókod", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny", "user": false}
-    ],
-    "homecontent2title": "Kiemelt Receptek",
-    "homecontent2card": [
-        {"text": "Paprikás krumpli", "link": "pantry", "pic": "https://attic.sh/zizosqhtkc9g4lsjyv358gus0nzs"},
-        {"text": "Húsleves", "link": "register", "pic": "https://attic.sh/c6gfetxd7dv3hkarz1s8uh46sxny"},
-        {"text": "BBQ csirkeszárny", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
-        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
-        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"},
-        {"text": "Nuggets", "link": "recipes", "pic": "https://attic.sh/c11difv7b9aivntjpscdehbld4z2"}
-    ],
-    "registerTitle": "Regisztráció",
-    "loginTitle": "Bejelentkezés",
-    "passwordText": "Jelszó",
-    "confirmPasswordText": "Jelszó megerősítése",
-    "emailLabel": "E-mail cím",
-    "nameLabel": "Név",
-    "alreadyAccountLabel": "Már van fiókod?",
-    "signInGoogle": "Bejelentkezés a Google-lel",
-    "notRegistered": "Fiók létrehozása",
-
-    "editButton": "Szerkeszt",
-    "deleteButton": "Törlés",
-    "saveButton": "Mentés",
-    "cancelButton": "Megszakitás",
-    "addButton": "Hozzáadás",
-
-    "adminPages": [
-        {"text": "Receptek szerkesztése", "link": "admin/recipes-list", "image": "assets/images/icons/pencil.line@5x.png", "admin": 1},
-        {"text": "Hozzávalók szerkesztése", "link": "admin/ingredients-list", "image": "assets/images/icons/pencil.and.list.clipboard@5x.png", "admin": 1},
-        {"text": "Felhasználok kezelése", "link": "admin/users", "image": "assets/images/icons/person.2.badge.gearshape@5x.png", "admin": 2}
-    ],
-    "adminWelcome": "Szia",
-
-    "pantryHeaderTitle": "Alapvető élelmiszerek",
-    "pantryHeaderText": "Pár hozzávalót alapvetőnek gondolunk minden háztartásban, ezért ezeket nem tudjátok kiválasztani: ",
-
-    "recipesHeaderTitle": "Receptek",
-    "ingredientsHeaderTitle": "Hozzávalók",
-    "descriptionTitle": "Lépések",
-    "imageSource": "A kép forrása",
-    "OR": "Ez vagy az",
-    "AND": "Ez megtalálható benne biztosan",
-    "showrecipe": "Mutasd a recepteket",
-    "showingredients": "Mutasd a hozzávalókat",
-    "pending": "Jóváhagyásra váró receptek száma",
-    "selectedIngredientsTitle": "Kiválasztott összetevők",
-    "searchForIngredients": "Kezdjen el írni az összetevők kereséséhez...",
-    "searchForRecipes": "Kezdjen el írni a receptek kereséséhez...",
-    "searchTitle": "Keresés",
-    "deleteSelected": "Kiválasztott összetevők törlése",
-    "ingredientName": "Összetevő neve",
-    "imageLink": "A kép linkje",
-    "remove": "Eltávolítás",
-    "quantity": "Mennyiség",
-    "waitingForApprove": "Jóváhagyásra vár",
-    "approve": "Jóváhagyás",
-    "addIngredient": "Összetevő hozzáadása",
-    "operations":"Műveletek",
-    "preview":"Előnézet",
-    "ingredientsDescription": "Az összetevők közt kereshetsz is az \"Összetevő neve\" mezőben és ha nincs találat hozzá is adhatod",
-    "language": "Nyelv",
-    "everyRecipe": "Minden nyelv",
-    "pendingRecipes": "Jóváhagyásra váró receptek",
-    "userRecipesHeaderTitle": "Saját receptek"
 }

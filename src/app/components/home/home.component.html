@@ -1,4 +1,7 @@
 <div class="content">
+
+
+  <!-- Welcome -->
   <section>
     <div class="welcome">
       <div class="hero-section row">
@@ -9,25 +12,25 @@
       <div class="row card-container">
         <div class="col title-col">
           <div class="card valami title-card">
-            <h2>Welcome to my portfolio</h2>
-            <h3>Hello There!</h3>
+            <h2 [innerHTML]="welcomeTitle"></h2>
+            <h3 [innerHTML]="welcomeSubtitle"></h3>
           </div>
         </div>
         <div class="col">
           <div class="row">
             <div class="card col about small-card" (click)="scrollToSection('about')">
-              <h2>Learn more about me</h2>
-              <h3>About Me</h3>
+              <h2 [innerHTML]="aboutCardTitle"></h2>
+              <h3 [innerHTML]="aboutCardSubtitle"></h3>
             </div>
             <div class="card col work small-card" (click)="scrollToSection('work')">
-              <h2>See some of my projects</h2>
-              <h3>Work</h3>
+              <h2 [innerHTML]="workCardTitle"></h2>
+              <h3 [innerHTML]="workCardSubtitle"></h3>
             </div>
           </div>
           <div class="row">
             <div class="card contact" (click)="scrollToSection('contact')">
-              <h2>Get in touch with me</h2>
-              <h3>Contact</h3>
+              <h2 [innerHTML]="contactCardTitle"></h2>
+              <h3 [innerHTML]="contactCardSubtitle"></h3>
             </div>
           </div>
         </div>
@@ -35,21 +38,22 @@
     </div>
   </section>
 
+  <!-- About -->
   <section id="about">
     <div class="section about-section" [ngClass]="{'in-view': aboutInView}">
       <div class="row">
         <div class="col text">
-          <h2>About Me</h2>
-          <p>I’m a passionate software developer with experience in building modern web applications using <strong>Laravel</strong>, <strong>Angular</strong>, and <strong>Java</strong>.</p>
-          <p>Currently, I’m learning <strong>Swift</strong> to expand into iOS development.</p>
-          <p>Outside of coding, I also work as a <strong>video editor</strong>, combining creativity and technical skills to tell stories through visuals.</p>
-          <p>I love learning new technologies and taking on creative challenges. Feel free to reach out!</p>
+          <h2 [innerHTML]="aboutTitle"></h2>
+          <p [innerHTML]="aboutParagraph1"></p>
+          <p [innerHTML]="aboutParagraph2"></p>
+          <p [innerHTML]="aboutParagraph3"></p>
+          <p [innerHTML]="aboutParagraph4"></p>
         </div>
         <div class="col skills">
           <div class="section-card">
-            <h2>My Skills</h2>
+            <h2 [innerHTML]="skillsTitle"></h2>
             <ul>
-              <li><strong>Frontend:</strong> Angular, JavaScript, TypeScript, HTML & CSS</li>
+              <li><strong>Frontend:</strong> Angular, TypeScript, HTML & CSS</li>
               <li><strong>Backend:</strong> Laravel (PHP), Express (Node.js)</li>
               <li><strong>Mobile:</strong> Swift (in progress)</li>
               <li><strong>Database:</strong> MySQL</li>
@@ -62,89 +66,89 @@
     </div>
   </section> 
 
-<section class="work" id="work">
-  <div class="section work-section">
-    <div class="work-header title">
-      <h2>My Work</h2>
-    </div>
-
-    <div class="switch-container">
-      <label class="switch">
-        <input type="checkbox" [(ngModel)]="isVideoEditing" />
-        <span class="slider"></span>
-      </label>
-      <span> {{ isVideoEditing ? 'Editing' : 'Development' }}</span>
-    </div>
-
-
-
-    <!-- Dinamikusan váltunk osztályt -->
-    <div class="work-content" [ngClass]="{ reverse: isVideoEditing }">
-      <div class="text">
-        <h3>{{ isVideoEditing ? 'About my video editing work' : 'About my development work' }}</h3>
-        <p>
-          {{ isVideoEditing 
-            ? 'These are my video editing projects, where I combine creativity and technical skills to create engaging content.' 
-            : 'These are my development projects...' }}
-        </p>
+  <!-- Work -->
+  <section class="work" id="work">
+    <div class="section work-section">
+      <div class="work-header title">
+        <h2 [innerHTML]="workTitle"></h2>
       </div>
 
-      <div class="projects">
-      <a 
-        class="card" 
-        *ngFor="let project of projects" 
-        [href]="project.link" 
-        rel="noopener noreferrer"
-        >
-        <!-- target="_blank" -->
+      <div class="switch-container">
+        <label class="switch">
+          <input type="checkbox" [checked]="isVideoEditing" (change)="toggleSwitch()" />
+          <span class="slider"></span>
+        </label>
+        <span>{{ isVideoEditing ? workSwitchEditing : workSwitchDevelopment }}</span>
+      </div>
+
+      <div class="work-content" [ngClass]="{ reverse: isVideoEditing }">
+        <div class="text">
+          <h3 [innerHTML]="isVideoEditing ? workEditingTitle : workDevTitle"></h3>
+          <p [innerHTML]="isVideoEditing ? workEditingDesc : workDevDesc"></p>
+        </div>
+
+          <div class="projects">
+  <a 
+    class="card"
+    *ngFor="let project of projects"
+    [href]="project.link"
+    rel="noopener noreferrer"
+    #projectCard
+  >
     <img [src]="project.image" [alt]="project.title" />
     <h3>{{ project.title }}</h3>
     <p>{{ project.description }}</p>
   </a>
 </div>
 
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
+  <!-- Contact -->
   <section id="contact">
     <div class="contact-section">
       <div class="contact-header">
-        <h2>Do you have a question,<br> an idea, or a project you need help with?<br><strong>Contact me!</strong></h2>
+        <h2 [innerHTML]="contactTitle"></h2>
         <div class="contact-info">
           <a href="mailto:work@norbertgillich.com">work&#64;norbertgillich.com</a>
-          <a href="tel:+36704148762">+36 70 414 8762</a>
+
           <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/gillichnorbert"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/norbert-gillich-326859301/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/gillichnorbert"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
 
       <form class="contact-form" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <input [(ngModel)]="name" type="text" name="name" placeholder="Name" required>
-          <input [(ngModel)]="email" type="email" name="email" placeholder="E-mail" required>
-          <input [(ngModel)]="subject" type="text" name="subject" placeholder="Subject">
+          <input [(ngModel)]="name" type="text" name="name" [placeholder]="formName" required>
+          <input [(ngModel)]="email" type="email" name="email" [placeholder]="formEmail" required>
+          <input [(ngModel)]="subject" type="text" name="subject" [placeholder]="formSubject">
         </div>
-        <textarea [(ngModel)]="message" name="message" placeholder="Message" required></textarea>
+        <textarea [(ngModel)]="message" name="message" [placeholder]="formMessage" required></textarea>
         <button type="submit">
-          <span>Send</span>
+          <span>{{ formSend }}</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 15 12 9 18 15" />
           </svg>
         </button>
-        <p *ngIf="success" class="text-success-600 mt-2 text-center">Your message has been sent successfully!</p>
+        <p *ngIf="success" class="text-success-600 mt-2 text-center">{{ formSuccess }}</p>
       </form>
     </div>
   </section>
+
+<div class="fixed-buttons">
+  <button class="lang-switch" (click)="toggleLanguage()">
+    {{ actLang }}
+  </button>
 
   <button class="scroll-to-top" (click)="scrollToTop()" *ngIf="showScrollTopButton">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="6 15 12 9 18 15" />
     </svg>
   </button>
+</div>
 </div>

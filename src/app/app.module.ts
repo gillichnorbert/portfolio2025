@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ShortformComponent } from './shortform/shortform.component';
+import { ShortformComponent } from './components/shortform/shortform.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFunctions, provideFunctions } from '@angular/fire/functions';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -34,7 +34,8 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireFunctionsModule, // Ha szükséges, importáld a Firebase Functions modult
     AngularFireDatabaseModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    HttpClientModule
   ],
   providers: [
 

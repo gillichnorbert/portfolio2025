@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ElementRef, QueryList, ViewChildren, inject } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import Player from '@vimeo/player';
+import { VideosService } from '../../services/videos.service';
 
 @Component({
   selector: 'app-shortform',
@@ -9,28 +10,38 @@ import Player from '@vimeo/player';
 })
 export class ShortformComponent implements AfterViewInit {
 
-  videos: { id: number; url: SafeResourceUrl }[];
+  videos: { id: number; url: SafeResourceUrl }[] = [];
   private sanitizer = inject(DomSanitizer);
 
   @ViewChildren('videoIframe') iframes!: QueryList<ElementRef<HTMLIFrameElement>>;
   private players = new Map<HTMLIFrameElement, Player>();
   currentIndex = 0;
 
-  constructor() {
-    this.videos = [
-      { id: 1, url: this.sanitizer.bypassSecurityTrustResourceUrl('https://player.vimeo.com/video/1116347038?muted=1&autopause=0') },
-      { id: 2, url: this.sanitizer.bypassSecurityTrustResourceUrl('https://player.vimeo.com/video/1116347050?muted=1&autopause=0') },
-      { id: 3, url: this.sanitizer.bypassSecurityTrustResourceUrl('https://player.vimeo.com/video/1116347056?muted=1&autopause=0') }
-    ];
+  constructor(private videosService: VideosService) {
+    this.loadVideos();
+  }
+
+  // 🔹 Videók lekérése a service-ből
+  loadVideos() {
+    this.videosService.getVideos().subscribe((data: any) => {
+      if (data) {
+        this.videos = Object.keys(data).map((key, index) => ({
+          id: index + 1,
+          url: this.sanitizer.bypassSecurityTrustResourceUrl(data[key].url)
+        }));
+      }
+    });
   }
 
   ngAfterViewInit() {
-    this.iframes.forEach(iframeRef => {
-      const player = new Player(iframeRef.nativeElement);
-      this.players.set(iframeRef.nativeElement, player);
+    // Figyeljük a változásokat, mert a videók aszinkron töltődnek
+    this.iframes.changes.subscribe(() => {
+      this.iframes.forEach(iframeRef => {
+        const player = new Player(iframeRef.nativeElement);
+        this.players.set(iframeRef.nativeElement, player);
+      });
+      this.playCurrentVideo();
     });
-
-    this.playCurrentVideo();
   }
 
   playCurrentVideo() {

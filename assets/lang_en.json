@@ -1,44 +1,39 @@
 {
-    "name": "Instant Recipe",
-    "flagLink": "https://www.harley-davidson.com/content/dam/h-d/images/assets/ui/flags/hungary.png",
-    "langSelection":[
-        {"text":"Magyar", "sign":"hu"},
-        {"text":"English", "sign":"en"}
-    ],
-
-    "welcomeTitle": "Welcome to my portfolio",
-    "welcomeSubtitle": "Hello There!",
-    "aboutCardTitle": "Learn more about me",
-    "aboutCardSubtitle": "About Me",
-    "workCardTitle": "See some of my projects",
-    "workCardSubtitle": "Work",
-    "contactCardTitle": "Get in touch with me",
-    "contactCardSubtitle": "Contact",
-    "aboutTitle": "About Me",
-"aboutParagraph1": "I've been fascinated by the world of media and computers since I was a child. I am passionate about web development using Angular, Firebase, Laravel, and Bootstrap, and I am also increasingly interested in mobile applications, especially with Swift.",
-"aboutParagraph2": "In 2023, I completed a video editing course at TV2, where I learned a lot about creative storytelling and technical skills.",
-"aboutParagraph3": "In the same year, I started studying software development and testing at BZSH Külkereskedelmi Technikum, where I graduated with a 93% result, strengthening my knowledge in modern software development.",
-"aboutParagraph4": "Since September 2025, I have been studying Computer Engineering at Óbuda University, Neumann János Faculty of Informatics. I enjoy exploring new technologies, working on creative projects, and I am always excited to take on new challenges – feel free to reach out!",
-    "skillsTitle": "My Skills",
-    "workTitle": "My Work",
-    "workSwitchEditing": "Editing",
-    "workSwitchDevelopment": "Development",
-    "workEditingTitle": "About my video editing work",
-    "workEditingDesc": "These are my video editing projects, where I combine creativity and technical skills to create engaging content.",
-    "workDevTitle": "About my development work",
-    "workDevDesc": "Here you can find my latest web and software projects. Every project is driven by a single goal: to blend modern technologies with creative problem-solving to build something new and valuable.",
-    "contactTitle": "Do you have a question,<br> an idea, or a project you need help with?<br><strong>Contact me!</strong>",
-    "formName": "Name",
-    "formEmail": "E-mail",
-    "formSubject": "Subject",
-    "formMessage": "Message",
-    "formSend": "Send",
-    "formSuccess": "Your message has been sent successfully!",
-
-
-    "webProjects": [
+  "langSelection": [
+    { "text": "Magyar", "sign": "hu" },
+    { "text": "English", "sign": "en" }
+  ],
+  "welcomeTitle": "Welcome to my portfolio",
+  "welcomeSubtitle": "Hello There!",
+  "aboutCardTitle": "Learn more about me",
+  "aboutCardSubtitle": "About Me",
+  "workCardTitle": "See some of my projects",
+  "workCardSubtitle": "Work",
+  "contactCardTitle": "Get in touch with me",
+  "contactCardSubtitle": "Contact",
+  "aboutTitle": "About Me",
+  "shortFormTitle": "Short Form Videos",
+  "aboutParagraph1": "<h3><b>Background & Vision:</b></h3> The fusion of visual creation and an engineering mindset defines me. I started as a video editor (<b>TV2</b>), which helps me think in user-friendly and aesthetic solutions as a developer.",
+  "aboutParagraph2": "<h3><b>Studies:</b></h3> I mastered the basics of <b>software development</b> during my vocational training, graduating with <b>excellent results</b>. The next step in my professional growth is the Computer Engineering program at <b>Óbuda University</b>, which I started in the autumn of 2025.",
+  "aboutParagraph3": "<h3><b>Professional Focus:</b></h3> As a web developer, I build on solid foundations, but I constantly expand my technological horizons. My attention has now turned to native mobile applications: currently, mastering <b>Swift</b> and implementing more complex, platform-specific solutions is my goal.",
+  "skillsTitle": "Tech Stack",
+  "workTitle": "My Work",
+  "workSwitchEditing": "Editing",
+  "workSwitchDevelopment": "Development",
+  "workEditingTitle": "About my video editing work",
+  "workEditingDesc": "These are my video editing projects, where I combine creativity and technical skills to create engaging content.",
+  "workDevTitle": "About my development work",
+  "workDevDesc": "Here you can find my latest web and software projects. Every project is driven by a single goal: to blend modern technologies with creative problem-solving to build something new and valuable.",
+  "contactTitle": "Do you have a question,<br> an idea, or a project you need help with?<br><strong>Contact me!</strong>",
+  "formName": "Name",
+  "formEmail": "E-mail",
+  "formSubject": "Subject",
+  "formMessage": "Message",
+  "formSend": "Send",
+  "formSuccess": "Your message has been sent successfully!",
+  "webProjects": [
     {
-      "title": "Csaba Szabó Master of Ceremonies",
+      "title": "Csaba Szabó - Master of Ceremonies",
       "description": "A professional website for wedding host Csaba Szabó, built with Angular frontend and a Firebase backend. The platform is designed to elegantly showcase his services, photo gallery, and contact information.",
       "image": "https://ceremoniamestercsaba.hu/assets/img/boritokep.png",
       "link": "https://ceremoniamestercsaba.hu"
@@ -56,7 +51,6 @@
       "link": "https://github.com/gillichnorbert"
     }
   ],
-
   "videoProjects": [
     {
       "title": "Short Form Videos",
@@ -77,7 +71,5 @@
       "link": "https://youtu.be/zxTy-kzTKJs"
     }
   ],
-    "typedItems": "Frontend Developer, Software Developer, Video Editor"
-
-
+  "typedItems": "Frontend Developer, Software Developer, Video Editor"
 }

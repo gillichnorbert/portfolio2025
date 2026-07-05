@@ -35,6 +35,26 @@
   "formSend": "Send",
   "formSuccess": "Your message has been sent successfully!",
   "webProjects": [
+    
+  {
+    "title": "Door & Window Professional Service",
+    "description": "A professional portfolio website for a Door & Window Repair Service, built with an Angular frontend. The platform aims to transparently showcase their door and window repair services, reference works, and clearly communicate the specialist's direct contact information.",
+    "image": "https://ajto-ablak-szakszerviz.hu/assets/cover_logo.webp",
+    "link": "https://ajto-ablak-szakszerviz.hu"
+  },
+  {
+    "title": "Vertrend - General Contracting",
+    "description": "A clean and professional portfolio website for Vertrend Ltd., built with an Angular frontend. The platform aims to transparently showcase the company's general contracting and renovation services, reference works, and clearly communicate the direct contact information needed for quote requests.",
+    "image": "https://vertrendepites.hu/assets/cover_logo.webp",
+    "link": "https://vertrendepites.hu"
+  },
+  {
+    "title": "PrimeSelfie - Photobooth Rental",
+    "description": "A clean portfolio website for PrimeSelfie, offering photobooth rentals for weddings and premium events. The platform's goal is to attractively present the benefits of studio-quality photography, the available rental packages, and to provide quick contact for clients through an interactive form.",
+    "image": "https://primeselfie.hu/assets/coverphoto.webp",
+    "link": "https://primeselfie.hu"
+  },
+
     {
       "title": "Csaba Szabó - Master of Ceremonies",
       "description": "A professional website for wedding host Csaba Szabó, built with Angular frontend and a Firebase backend. The platform is designed to elegantly showcase his services, photo gallery, and contact information.",

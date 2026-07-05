@@ -37,6 +37,25 @@
     "formSuccess": "Az üzeneted sikeresen elküldve!",
 "webProjects": [
   {
+    "title": "Ajtó-Ablak Szakszervíz",
+    "description": "Egy professzionális bemutatkozó weboldal az Ajtó-Ablak Szakszervíz számára, amely Angular frontenddel készült. A platform célja, hogy átlátható módon mutassa be a nyílászáró-javítási szolgáltatásokat, a referenciamunkákat, és egyértelműen kommunikálja a szakember közvetlen elérhetőségeit.",
+    "image": "https://ajto-ablak-szakszerviz.hu/assets/cover_logo.webp",
+    "link": "https://ajto-ablak-szakszerviz.hu"
+  },
+{
+    "title": "Vertrend - Generálkivitelezés",
+    "description": "Egy letisztult és professzionális bemutatkozó weboldal a Vertrend Kft. számára, amely Angular frontenddel készült. A platform célja, hogy átláthatóan bemutassa a cég generálkivitelezési és felújítási szolgáltatásait, a referenciamunkákat, és egyértelműen kommunikálja az ajánlatkéréshez szükséges közvetlen elérhetőségeket.",
+    "image": "https://vertrendepites.hu/assets/cover_logo.webp",
+    "link": "https://vertrendepites.hu"
+  },
+
+  {
+    "title": "PrimeSelfie - Szelfigép bérlés",
+    "description": "Egy letisztult bemutatkozó weboldal a PrimeSelfie számára, amely esküvőkre és nívós rendezvényekre kínál fotóautomata-bérlést. A platform célja, hogy vonzó formában prezentálja a stúdióminőségű fotózás előnyeit, a bérelhető csomagokat, valamint egy interaktív űrlapon keresztül gyors kapcsolatfelvételt biztosítson az ügyfeleknek.",
+    "image": "https://primeselfie.hu/assets/coverphoto.webp",
+    "link": "https://primeselfie.hu"
+  },
+  {
     "title": "Szabó Csaba - Ceremóniamester",
     "description": "Egy bemutatkozó weboldal Szabó Csaba ceremóniamesternek, amely Angular frontenddel és Firebase backenddel készült. A platform célja, hogy elegáns módon mutassa be szolgáltatásait, fotógalériáját és elérhetőségeit.",
     "image": "https://ceremoniamestercsaba.hu/assets/img/boritokep.png",
